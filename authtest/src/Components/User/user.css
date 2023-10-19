@@ -1,0 +1,20 @@
+.User {
+    color: whitesmoke;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.301),
+      rgba(255, 255, 255, 0.2)
+    );
+    backdrop-filter: blur(1rem);
+    transition: 0.4s;
+  }
+  
+  .User:hover {
+    background: linear-gradient(
+      to left top,
+      rgba(255, 255, 255, 0.159),
+      rgba(255, 255, 255, 0.052)
+    );
+    color: beige;
+    transform: scale(1.05);
+  }

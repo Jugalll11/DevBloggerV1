@@ -1,0 +1,7 @@
+.wall {
+  scrollbar-width: none;
+}
+
+.wall::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,159 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    /* margin: 2%; */
+    position: relative;
+    padding-top: 4rem;
+    transition: all 300ms ease;
+    background-color: rgba(29, 55, 222, 0.25);
+    backdrop-filter: blur(50px);
+    border-radius: 0rem 2rem 2rem 0rem;
+  }
+  /* logo */
+  .bars {
+    display: none;
+  }
+  
+  .spinner {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .logo {
+    display: flex;
+    height: 5rem;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    height: 4%;
+  }
+  
+  .img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+  
+  .logo > span > span {
+    color: rgba(26, 144, 253, 0.25)
+  }
+  
+  .logo > img {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  /* menu */
+  .menu {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .menuItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 2.5rem;
+    margin-left: 2rem;
+    position: relative;
+    transition: all 300ms ease;
+    border-radius: 0.7rem;
+    font-size: 14px;
+    width: fit-content;
+    padding: 1rem;
+    transition: width 2s, ease;
+  }
+  
+  .menuItem:hover {
+    cursor: pointer;
+    width: 60%;
+    background:rgba(3, 12, 115, 0.89);
+    color: aliceblue;
+  }
+
+ 
+  
+  .menu .menuItem:last-child {
+    position: absolute;
+    bottom: 2.3rem;
+    width: fit-content;
+    padding: 1rem;
+
+  }
+  
+  .active {
+    background:rgba(81, 93, 223, 0.25);
+    margin-left: 0;
+  }
+  .active::before {
+    content: "";
+    width: 8px;
+    height: 100%;
+    background: rgba(55, 103, 226, 0.25);
+    margin-right: calc(1rem - 8px);
+  }
+  
+  /* Tablets */
+  @media screen and (max-width: 1200px) {
+    .menuItem > span {
+      display: none;
+      transition: all 300ms ease;
+    }
+    .logo {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      z-index: 9;
+      /* background: #ffe0e0; */
+      width: 55%;
+      padding-right: 1rem;
+      height: 100%;
+    }
+    .menuItem > span {
+      display: block;
+    }
+    .logo {
+      display: flex;
+    }
+    .menu .menuItem:last-child {
+      position: relative;
+      margin-top: 6rem;
+    }
+    .bars {
+      display: flex;
+      position: fixed;
+      top: 1rem;
+      left: 60%;
+      /* background:#ffe0e0; */
+      margin-top: 0.5rem;
+      border-radius: 10px;
+      z-index: 9;
+      transition: all 1000ms ease;
+    }
+    .close {
+      left: -60%;
+    }
+  }
+  
